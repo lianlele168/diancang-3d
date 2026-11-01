@@ -71,7 +71,9 @@ journalctl -u power-strip-dev -f
 
 ## GitHub Pages 自动构建
 
-生产站点：`https://kernel4632.github.io/power-strip/`。
+生产站点：`https://lianlele168.github.io/power-cabin/`。
+
+本仓库是 `https://github.com/kernel4632/power-strip` 的独立部署副本，远端 `upstream` 指向原仓库，`origin` 指向本仓库。原仓库仍在 `https://kernel4632.github.io/power-strip/` 部署，两者互不影响。
 
 - 推送到 `main` 自动执行锁文件安装、lint（警告视为失败）、TypeScript 检查、生产构建与 Pages 部署。
 - 面向 `main` 的 Pull Request 只运行检查和构建，不部署，且不获取 Pages 写权限。
@@ -80,8 +82,8 @@ journalctl -u power-strip-dev -f
 - Pages 产物只包含 `dist/`，不发布源码目录或开发服务。
 
 ```bash
-npm run build:pages  # /power-strip/ 子路径构建
-npm run preview -- --base=/power-strip/
+npm run build:pages  # /power-cabin/ 子路径构建
+npm run preview -- --base=/power-cabin/
 ```
 
 普通 `npm run build` 与 `46340` 开发预览继续使用根路径。Pages 是生产构建：修改代码后需提交并推送，等 Actions 成功才更新，不提供开发 HMR。重命名仓库或改用自定义域名时，应同步调整 `build:pages` 中的基础路径。
