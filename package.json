@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "prebuild:pages": "npm run check:data && npm run check:interaction && npm run check:energy && npm run check:geometry",
-    "build:pages": "npm run build -- --base=/power-cabin/",
+    "build:pages": "npm run build -- --base=/diancang-3d/",
     "typecheck": "tsc -b",
     "lint": "node scripts/check-ui.mjs && oxlint",
     "check:ui": "node scripts/check-ui.mjs",
